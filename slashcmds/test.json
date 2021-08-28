@@ -1,0 +1,14 @@
+{
+    "data": {
+        "name": "test",
+        "description": "Une commande de test trop cool !",
+        "options":[
+          {
+            "name":"message",
+            "description": "Le message",
+            "type": 3,
+            "required": false
+          }
+        ]
+      }
+}
