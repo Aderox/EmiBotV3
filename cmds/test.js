@@ -4,19 +4,21 @@ const fetch = require('node-fetch');
 
 module.exports.run = async(client, interaction) => {
    console.log("trop bien !");
-   //await interaction.deferReply({ ephemeral: true }); //for long task
-   await interaction.reply("EMT !");
+   await interaction.deferReply({ ephemeral: false }); //for long task. Ephemeral is for user only
+   //await interaction.reply("EMT !");
+   //await interaction.editReply({content: '** **', embeds: [embed]});
 
    const embed = new Discord.MessageEmbed()
-   .setColor('#0099ff')
-   .setTitle('Some title')
+   .setColor('#8700C1')
+   .setTitle('EMT !')
    .setURL('https://discord.js.org/')
-   .setAuthor('Some name', 'https://i.imgur.com/AfFp7pu.png', 'https://discord.js.org')
-   .setDescription('Some description here')
+   .setAuthor('Emilia', 'https://i.pinimg.com/originals/36/a6/42/36a64244a6344c5ef39f259f6dbe6737.jpg', 'https://adandcoinc.xyz')
+   .setDescription('Lorem ipsum doloris')
+   .setImage('https://media.discordapp.net/attachments/723620072383447120/822068052308918292/Emi_Stats.gif')
 
-   setTimeout( () => {
-       interaction.editReply({embeds: [embed]});
-   }, 200);
+   setTimeout( async() => {
+       await interaction.editReply({embeds: [embed]});
+   }, 3000);
 }
 
 module.exports.help =  {

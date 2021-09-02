@@ -1,0 +1,126 @@
+{
+    "data": {
+        "name": "remind",
+        "description": "Votre agendas",
+        "options":[
+          {
+            "name":"add",
+            "description": "Ajouté un évènement dans votre agendas",
+            "type": 1,
+            "options": [
+                    {
+                      "name": "evenement",
+                      "description": "L'evenement à enrengistrer",
+                      "type": 3,
+                      "required": true
+                    },
+                    {
+                      "name": "type",
+                      "description": "L'evenement va se dérouler à une date précise (le) ou après certain temps (dans)",
+                      "type": 3,
+                      "required": true,
+                      "choices": [
+                        {
+                            "name": "le",
+                            "value": "le"
+                        },
+                        {
+                            "name": "dans",
+                            "value": "dans"
+                        }
+                    ]
+                    },
+                    {
+                      "name": "jour",
+                      "description": "Le(s) jour(s) de l'évent",
+                      "type": 4,
+                      "required": true
+                    },
+                    {
+                      "name": "mois",
+                      "description": "Le(s) mois de l'évent",
+                      "type": 4,
+                      "required": true,
+                      "choices": [
+                        {"name": "0", "value": 0},
+                        {"name": "1", "value": 1},
+                        {"name": "2", "value": 2},
+                        {"name": "3", "value": 3},
+                        {"name": "4", "value": 4},
+                        {"name": "5", "value": 5},
+                        {"name": "6", "value": 6},
+                        {"name": "7", "value": 7},
+                        {"name": "8", "value": 8},
+                        {"name": "9", "value": 9},
+                        {"name": "10", "value": 10},
+                        {"name": "11", "value": 11},
+                        {"name": "12", "value": 12}
+                      ] 
+                    },
+                    {
+                      "name": "annee",
+                      "description": "L'(es) année(s) de l'évent",
+                      "type": 4,
+                      "required": true
+                    },
+                    {
+                      "name": "heure",
+                      "description": "Les heures",
+                      "type": 4,
+                      "required": true,
+                      "choices": [
+                        {"name": "0", "value": 0},
+                        {"name": "1", "value": 1},
+                        {"name": "2", "value": 2},
+                        {"name": "3", "value": 3},
+                        {"name": "4", "value": 4},
+                        {"name": "5", "value": 5},
+                        {"name": "6", "value": 6},
+                        {"name": "7", "value": 7},
+                        {"name": "8", "value": 8},
+                        {"name": "9", "value": 9},
+                        {"name": "10", "value": 10},
+                        {"name": "11", "value": 11},
+                        {"name": "12", "value": 12},
+                        {"name": "13", "value": 13},
+                        {"name": "14", "value": 14},
+                        {"name": "15", "value": 15},
+                        {"name": "16", "value": 16},
+                        {"name": "17", "value": 17},
+                        {"name": "18", "value": 18},
+                        {"name": "19", "value": 19},
+                        {"name": "20", "value": 20},
+                        {"name": "21", "value": 21},
+                        {"name": "22", "value": 22},
+                        {"name": "23", "value": 23}
+                      ] 
+                    },
+                    {
+                      "name": "minute",
+                      "description": "Les minutes",
+                      "type": 4,
+                      "required": true
+                    }
+              ]
+          },
+          {
+            "name":"remove",
+            "description": "Supprimer un évènement de votre agendas",
+            "type": 1,
+            "options": [
+              {
+                "name": "id",
+                "description": "L'id de l'évènement à supprimer. 0 pour tout supprimer",
+                "type": 4,
+                "required": true
+              }
+            ]
+          },
+          {
+            "name":"show",
+            "description": "Afficher votre agendas",
+            "type": 1
+          }
+        ]
+      }
+}
